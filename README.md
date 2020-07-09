@@ -3,13 +3,12 @@
 
 ![Screenshot](agenda_screenshot.png)
 
-> Subtitle or Short Description Goes Here
+> Android Application that allows you to insert, view and edit events based on pre-set categories. 
+
+>It also provides a login functionality. 
+>Authentication occurs by calling a mysql database exposed by the local Rest Java service available at the link <a href="http://github.com/m4lc0m/agenda-rest-server" target="_blank">`agenda-rest-server`</a>.
 
 ![Screenshot](login.png)
-
-> ideally one sentence
-
-> include terms/tags that can be searched
 
 ---
 
@@ -18,28 +17,9 @@
 > If your `README` has a lot of info, section headers might be nice.
 
 - [Installation](#installation)
-- [Features](#features)
-- [Contributing](#contributing)
-- [Team](#team)
-- [FAQ](#faq)
+- [Run](#run)
+- [Documentation](#Documentation)
 - [Support](#support)
-- [License](#license)
-
-
----
-
-## Example (Optional)
-
-```javascript
-// code away!
-
-let generateProject = project => {
-  let code = [];
-  for (let js = 0; js < project.length; js++) {
-    code.push(js);
-  }
-};
-```
 
 ---
 
@@ -48,19 +28,9 @@ let generateProject = project => {
 - All the `code` required to get started
 - Images of what it should look like
 
-### Clone
-
-- Clone this repo to your local machine using `https://github.com/fvcproductions/SOMEREPO`
-
 ### Setup
 
-
----
-
-## Features
-## Usage (Optional)
 ## Documentation (Optional)
-## Tests (Optional)
 
 ---
 
@@ -77,13 +47,6 @@ let generateProject = project => {
 - **HACK AWAY!** 🔨🔨🔨
 
 ### Step 3
-
----
-
-## FAQ
-
-- **How do I do *specifically* so and so?**
-    - No problem! Just do this.
 
 ---
 
