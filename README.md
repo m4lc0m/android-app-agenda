@@ -1,12 +1,11 @@
 
-# Agenda Android Application 
+# Android Application Agenda with Java Rest Server
 
 ![Screenshot](agenda_screenshot.png)
 
-> Android Application that allows you to insert, view and edit events based on pre-set categories. 
+>Android Application that allows you to insert, view and edit events based on pre-set categories.
 
->It also provides a login functionality. 
->Authentication occurs by calling a mysql database exposed by the local Rest Java service available at the link <a href="http://github.com/m4lc0m/agenda-rest-server" target="_blank">`agenda-rest-server`</a>.
+>It also provides a login functionality. Authentication occurs by calling a mysql database exposed by the local Rest Java service available at the link <a href="https://github.com/m4lc0m/android-app-agenda/tree/master/agenda-rest-server" target="_blank">`agenda-rest-server`</a>.
 
 ![Screenshot](login.png)
 
@@ -16,37 +15,78 @@
 
 > If your `README` has a lot of info, section headers might be nice.
 
-- [Installation](#installation)
-- [Run](#run)
 - [Documentation](#Documentation)
-- [Support](#support)
+- [Run](#Run)
+- [Database](#Database)
+- [Support](#Support)
+
+---
+## Documentation
+
+> Android version: 9
+
+> Android API: 28
+
+> Minimum API supported: 21
+
+> Gradle version: 3.3.1
+
+---
+## Run
+
+> Start first the server
+
+### Run Java Rest Server
+
+> Open the class DBConfiguration and set mysql username and password
+
+> Build with maven `mvn install`
+
+**Run with docker**
+
+> Run with docker command `docker-compose up --build`
+
+**Run with eclipse**
+
+> Run with Eclipse and Tomcat
+
+### Run Android Application
+
+> When server is started run the application
+
+**Run with Android Studio**
+
+> Build and run the project with Android Studio and run the application with emulator.
+
+**Run with Android Device**
+
+> Build apk with Android Studio and set the same connection between device and server on your local machine. 
 
 ---
 
-## Installation
+## Database
 
-- All the `code` required to get started
-- Images of what it should look like
+> The sql file to generate the database is already present in the server directory.
 
-### Setup
+### Configuration
 
-## Documentation (Optional)
+> Start MySql Workbench
 
----
+> Set connection to localhost with port 3306.
 
-### Step 1
+> Set username and password, the same of DBConfiguration class in the server.
 
-- **Option 1**
-    - 🍴 Fork this repo!
+### Population - Login example
 
-- **Option 2**
-    - 👯 Clone this repo to your local machine using ``
+> Create database agenda with command `CREATE DATABASE  IF NOT EXISTS 'agenda'`;
 
-### Step 2
+> Use db with `USE 'agenda'`;
 
-- **HACK AWAY!** 🔨🔨🔨
+> Drop and create table login with `DROP TABLE IF EXISTS `login`;
 
-### Step 3
+> Create table with `CREATE TABLE 'login' ('id_login' int(20) unsigned NOT NULL AUTO_INCREMENT,'username' varchar(150) NOT NULL,'password' varchar(150) NOT NULL,PRIMARY KE('id_login'),UNIQUE KEY 'userName' ('username'));`
+
+> Insert user with command `INSERT INTO 'login' VALUES (1,'username','0581938f0767a65b373cea80e905c25f'),(2,'admin','21232f297a57a5a743894a0e4a801fc3');`
 
 ---
 
@@ -54,5 +94,4 @@
 
 Reach out to me at one of the following places!
 
-- Email at `girolamo.musto@gmail.com`</a>
-
+- Email at `m4lc0m90@gmail.com`</a>

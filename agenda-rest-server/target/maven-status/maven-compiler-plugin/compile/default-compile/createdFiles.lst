@@ -1,0 +1,17 @@
+com/musto/rest/web/Login.class
+com/musto/rest/configuration/AppConfiguration.class
+com/musto/rest/services/EditEventoService.class
+com/musto/rest/db/DBConnection.class
+com/musto/rest/web/EditEvento.class
+com/musto/rest/model/Evento.class
+com/musto/rest/services/LoginService.class
+com/musto/rest/configuration/AppInitializer.class
+com/musto/rest/web/RemoveEvento.class
+com/musto/rest/services/RemoveEventoService.class
+com/musto/rest/web/NewEvento.class
+com/musto/rest/model/User.class
+com/musto/rest/services/LoadEventiService.class
+com/musto/rest/db/DBConfiguration.class
+com/musto/rest/web/LoadEventi.class
+com/musto/rest/web/EventoResource.class
+com/musto/rest/services/NewEventoService.class

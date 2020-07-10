@@ -12,21 +12,23 @@
 
 > If your `README` has a lot of info, section headers might be nice.
 
+- [Documentation](#Documentation)
 - [Installation](#installation)
 - [Run](#run)
-- [Documentation](#Documentation)
 - [Support](#support)
 
 ---
+## Documentation
 
+### API
+
+---
 ## Installation
 
 - All the `code` required to get started
 - Images of what it should look like
 
 ### Setup
-
-## Documentation (Optional)
 
 ---
 
@@ -40,7 +42,6 @@
 
 ### Step 2
 
-- **HACK AWAY!** 🔨🔨🔨
 
 ### Step 3
 
@@ -50,5 +51,5 @@
 
 Reach out to me at one of the following places!
 
-- Email at `girolamo.musto@gmail.com`</a>
+- Email at `m4lc0m90@gmail.com`</a>
 

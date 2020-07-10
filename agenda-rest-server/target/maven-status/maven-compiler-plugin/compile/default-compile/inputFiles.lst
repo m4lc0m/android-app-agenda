@@ -1,0 +1,17 @@
+/Users/m4lc0m/Desktop/Repository/server/AgendaRestServer-sviluppo/src/main/java/com/musto/rest/services/RemoveEventoService.java
+/Users/m4lc0m/Desktop/Repository/server/AgendaRestServer-sviluppo/src/main/java/com/musto/rest/services/EditEventoService.java
+/Users/m4lc0m/Desktop/Repository/server/AgendaRestServer-sviluppo/src/main/java/com/musto/rest/model/User.java
+/Users/m4lc0m/Desktop/Repository/server/AgendaRestServer-sviluppo/src/main/java/com/musto/rest/services/LoadEventiService.java
+/Users/m4lc0m/Desktop/Repository/server/AgendaRestServer-sviluppo/src/main/java/com/musto/rest/services/LoginService.java
+/Users/m4lc0m/Desktop/Repository/server/AgendaRestServer-sviluppo/src/main/java/com/musto/rest/web/RemoveEvento.java
+/Users/m4lc0m/Desktop/Repository/server/AgendaRestServer-sviluppo/src/main/java/com/musto/rest/web/EditEvento.java
+/Users/m4lc0m/Desktop/Repository/server/AgendaRestServer-sviluppo/src/main/java/com/musto/rest/model/Evento.java
+/Users/m4lc0m/Desktop/Repository/server/AgendaRestServer-sviluppo/src/main/java/com/musto/rest/services/NewEventoService.java
+/Users/m4lc0m/Desktop/Repository/server/AgendaRestServer-sviluppo/src/main/java/com/musto/rest/db/DBConnection.java
+/Users/m4lc0m/Desktop/Repository/server/AgendaRestServer-sviluppo/src/main/java/com/musto/rest/configuration/AppInitializer.java
+/Users/m4lc0m/Desktop/Repository/server/AgendaRestServer-sviluppo/src/main/java/com/musto/rest/configuration/AppConfiguration.java
+/Users/m4lc0m/Desktop/Repository/server/AgendaRestServer-sviluppo/src/main/java/com/musto/rest/web/LoadEventi.java
+/Users/m4lc0m/Desktop/Repository/server/AgendaRestServer-sviluppo/src/main/java/com/musto/rest/web/EventoResource.java
+/Users/m4lc0m/Desktop/Repository/server/AgendaRestServer-sviluppo/src/main/java/com/musto/rest/db/DBConfiguration.java
+/Users/m4lc0m/Desktop/Repository/server/AgendaRestServer-sviluppo/src/main/java/com/musto/rest/web/Login.java
+/Users/m4lc0m/Desktop/Repository/server/AgendaRestServer-sviluppo/src/main/java/com/musto/rest/web/NewEvento.java
