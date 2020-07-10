@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@color/textColor"
+    tools:context="com.musto.agendatest.CreaEvento">
+
+    <TextView
+        android:id="@+id/textViewCreaEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crea un nuovo evento"
+
+        android:textSize="30dp"
+        android:textColor="@color/buttonAddRem"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textViewCreaNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome"
+        android:layout_marginTop="20dp"
+
+        android:layout_below="@+id/textViewCreaEvento"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/textViewCreaData" />
+
+    <TextView
+        android:id="@+id/textViewCreaData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data"
+        android:layout_marginTop="20dp"
+
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewCreaNome"
+        android:layout_alignRight="@+id/textViewCreaLuogo" />
+
+    <TextView
+        android:id="@+id/textViewCreaOra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ora"
+        android:layout_marginTop="20dp"
+
+        android:layout_below="@+id/textViewCreaData"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Luogo"
+        android:layout_marginTop="20dp"
+        android:id="@+id/textViewCreaLuogo"
+        android:layout_below="@+id/textViewCreaOra"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/textViewCreaDescrizione" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descrizione"
+        android:layout_marginTop="20dp"
+        android:id="@+id/textViewCreaDescrizione"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewCreaLuogo" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Note aggiuntive"
+        android:id="@+id/textViewCreaNote"
+        android:layout_below="@+id/textViewCreaDescrizione"
+        android:layout_alignRight="@+id/textViewCreaDescrizione"
+        android:layout_marginTop="20dp" />
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButtonSalva"
+        android:src="@drawable/ic_save"
+        android:background="@color/textColor"
+        android:layout_marginBottom="34dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/textViewCreaEvento"
+        android:layout_marginEnd="66dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  Salva"
+        android:id="@+id/textViewSalva"
+        android:layout_above="@+id/imageButtonSalva"
+        android:layout_alignRight="@+id/textViewCreaEvento"
+        android:layout_alignLeft="@+id/imageButtonSalva" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButtonAnnulla"
+        android:src="@drawable/ic_annulla"
+        android:background="@color/textColor"
+        android:layout_marginLeft="28dp"
+        android:layout_below="@+id/textViewSalva"
+        android:layout_toRightOf="@+id/textViewCreaOra" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Annulla"
+        android:id="@+id/textViewAnnulla"
+        android:layout_above="@+id/imageButtonAnnulla"
+        android:layout_alignRight="@+id/imageButtonAnnulla" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editNome"
+        android:layout_above="@+id/textViewCreaData"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/textViewCreaNome" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editData"
+        android:layout_alignBottom="@+id/textViewCreaData"
+        android:layout_alignRight="@+id/editNome"
+        android:layout_toRightOf="@+id/textViewCreaNome" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editOra"
+        android:layout_above="@+id/textViewCreaLuogo"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/textViewCreaData" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editLuogo"
+        android:layout_alignBottom="@+id/textViewCreaLuogo"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/textViewCreaLuogo" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editDescrizione"
+        android:layout_below="@+id/textViewCreaLuogo"
+        android:layout_alignRight="@+id/editLuogo"
+        android:layout_toRightOf="@+id/textViewCreaLuogo" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editNote"
+        android:layout_below="@+id/editDescrizione"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/textViewCreaNote" />
+
+
+</RelativeLayout>

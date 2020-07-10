@@ -1,0 +1,89 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'org.sonarqube'
+
+apply plugin: 'findbugs'
+
+task findbugs(type: FindBugs) {
+    ignoreFailures = true
+    effort = "max"
+    reportLevel = "low"
+    excludeFilter = new File("${project.rootDir}/app/build/findbugs/rulesFindBugs.xml")
+    reports {
+        html.enabled = true
+        xml.enabled = false
+    }
+}
+apply plugin: 'checkstyle'
+check.dependsOn 'checkstyle'
+
+checkstyle {
+    toolVersion = '6.19'
+}
+
+task checkstyle(type: Checkstyle) {
+    description = "Check Java style with Checkstyle"
+    configFile = rootProject.file("config/checkstyle/checkstyle.xml")
+    source = javaSources()
+    classpath = files()
+    ignoreFailures = true
+}
+
+
+def javaSources() {
+    def files = []
+    android.sourceSets.each { sourceSet ->
+        sourceSet.java.each { javaSource ->
+            javaSource.getSrcDirs().each {
+                if (it.exists()) {
+                    files.add(it)
+                }
+            }
+        }
+    }
+    return files
+}
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.musto.agendatest"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        abortOnError false
+        lintConfig file("$project.rootDir/tools/rules-lint.xml")
+        htmlOutput file("$project.buildDir/outputs/lint/lint.html")
+        warningsAsErrors true
+        xmlReport false
+    }
+
+    testOptions {
+        animationsDisabled = true
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:28.0.0-rc02'
+    implementation 'com.android.support:support-v4:28.0.0-rc02'
+    implementation 'com.android.support:design:28.0.0-rc02'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-contrib:3.0.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-intents:3.1.0'
+    implementation 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
+}

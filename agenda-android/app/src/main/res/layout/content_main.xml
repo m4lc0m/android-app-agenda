@@ -1,0 +1,1670 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior" tools:showIn="@layout/app_bar_main"
+    tools:context=".MainActivity"
+    android:id="@+id/layout_main"
+    android:background="@color/textColor"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="   Agenda"
+        android:id="@+id/textViewPrincipale"
+        android:textSize="40dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold|italic"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="131dp"
+        android:layout_alignStart="@+id/textViewSecondaria"
+        android:layout_alignEnd="@+id/textViewSecondaria" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seleziona una categoria..."
+        android:id="@+id/textViewSecondaria"
+        android:textStyle="bold|italic"
+        android:textSize="20dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/contentHomeLayout"
+        android:background="@color/buttonAddRem"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true">
+
+        <TextView android:text="CASA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/textColor"
+            android:id="@+id/textCasa"
+            android:layout_marginTop="11dp"
+            android:layout_below="@+id/imageView_home"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView_home"
+            android:layout_marginEnd="33dp"
+            android:src="@drawable/ic_home_orange"
+            android:paddingTop="4sp"
+            android:paddingBottom="4sp"
+            android:paddingLeft="6sp"
+            android:paddingRight="6sp"
+            android:layout_toEndOf="@+id/textCasa"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eventi disponibili: "
+            android:id="@+id/textViewEventi"
+            android:textColor="@color/textColor"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textCasa" />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView_home"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/textViewAggiungi"
+            android:layout_alignParentStart="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonAdd"
+            android:src="@drawable/ic_plus"
+            android:adjustViewBounds="true"
+            android:paddingTop="4sp"
+            android:paddingBottom="4sp"
+            android:paddingLeft="6sp"
+            android:paddingRight="6sp"
+            android:layout_marginTop="8dp"
+            android:background="@color/buttonAddRem"
+            android:layout_alignEnd="@+id/textViewEventi"
+            android:layout_toEndOf="@+id/textViewAggiungi"
+            android:layout_below="@+id/textViewEventi" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aggiungi"
+            android:textColor="@color/textColor"
+            android:id="@+id/textViewAggiungi"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/textViewEventi"
+            android:layout_alignParentStart="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonRefresh"
+            android:src="@drawable/ic_refresh"
+            android:background="@color/buttonAddRem"
+            android:layout_alignTop="@+id/imageButtonAdd"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Refresh"
+            android:id="@+id/textViewRefresh"
+            android:textColor="@color/textColor"
+            android:layout_below="@+id/textViewEventi"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:id="@+id/content_home_details"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/textColor"
+            android:layout_marginTop="55dp"
+            android:id="@+id/textViewDettagli"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome:"
+            android:layout_marginTop="25dp"
+            android:id="@+id/viewNome"
+            android:layout_below="@+id/textViewDettagli"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data"
+            android:id="@+id/viewData"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewNome"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ora"
+            android:id="@+id/viewOra"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewData"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descrizione"
+            android:id="@+id/viewDescrizione"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewOra"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Luogo"
+            android:id="@+id/viewLuogo"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewDescrizione"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tempo stimato"
+            android:id="@+id/viewTimeLeft"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewLuogo"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Note Aggiuntive"
+            android:id="@+id/viewNote"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewTimeLeft"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="EVENTI CASA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/textColor"
+            android:id="@+id/textViewCasaCopy"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonBack"
+            android:src="@drawable/ic_back"
+            android:background="@color/buttonAddRem"
+            android:layout_marginBottom="43dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modifica"
+            android:textColor="@color/textColor"
+            android:id="@+id/textViewEdit"
+            android:layout_above="@+id/imageButtonEdit"
+            android:layout_alignEnd="@+id/imageButtonEdit" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonEdit"
+            android:src="@drawable/ic_edit"
+            android:layout_marginBottom="34dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/buttonAddRem"
+            android:layout_alignEnd="@+id/textViewDettagli"
+            android:layout_marginEnd="66dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Elimina"
+            android:textColor="@color/textColor"
+            android:id="@+id/textViewRemove"
+            android:layout_above="@+id/imageButtonRemove"
+            android:layout_alignEnd="@+id/imageButtonRemove"
+            android:layout_alignStart="@+id/imageButtonRemove" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonRemove"
+            android:src="@drawable/ic_remove"
+            android:layout_marginBottom="34dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/buttonAddRem"
+            android:layout_alignEnd="@+id/textViewDettagli"
+            android:layout_below="@+id/textViewEdit"
+            android:layout_toEndOf="@+id/textViewEdit" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/contentAmiciLayout"
+        android:background="@color/buttonAddRem"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true">
+
+        <TextView android:text="AMICI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/textColor"
+            android:id="@+id/textAmici"
+            android:layout_marginTop="11dp"
+            android:layout_below="@+id/imageView_amici"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView_amici"
+            android:layout_marginEnd="33dp"
+            android:src="@drawable/ic_amici_content"
+            android:paddingTop="4sp"
+            android:paddingBottom="4sp"
+            android:paddingLeft="6sp"
+            android:paddingRight="6sp"
+            android:layout_toEndOf="@+id/textAmici"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eventi disponibili: "
+            android:layout_marginTop="5dp"
+            android:id="@+id/textViewEventiAmici"
+            android:textColor="@color/textColor"
+            android:layout_below="@+id/textAmici"
+            android:layout_alignParentStart="true" />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView_amici"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/textViewAggiungiAmici"
+            android:layout_alignParentStart="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonAddAmici"
+            android:src="@drawable/ic_plus"
+            android:adjustViewBounds="true"
+            android:paddingTop="4sp"
+            android:paddingBottom="4sp"
+            android:paddingLeft="6sp"
+            android:paddingRight="6sp"
+            android:layout_marginTop="8dp"
+            android:background="@color/buttonAddRem"
+            android:layout_alignEnd="@+id/textViewEventiAmici"
+            android:layout_toEndOf="@+id/textViewAggiungiAmici"
+            android:layout_below="@+id/textViewEventiAmici" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aggiungi"
+            android:textColor="@color/textColor"
+            android:id="@+id/textViewAggiungiAmici"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/textViewEventiAmici"
+            android:layout_alignParentStart="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonRefreshAmici"
+            android:src="@drawable/ic_refresh"
+            android:background="@color/buttonAddRem"
+            android:layout_alignTop="@+id/imageButtonAddAmici"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Refresh"
+            android:id="@+id/textViewRefreshAmici"
+            android:textColor="@color/textColor"
+            android:layout_below="@+id/textViewEventiAmici"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:id="@+id/content_amici_details"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/textColor"
+            android:layout_marginTop="55dp"
+            android:id="@+id/textViewDettagliAmici"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome:"
+            android:layout_marginTop="25dp"
+            android:id="@+id/viewNomeAmici"
+            android:layout_below="@+id/textViewDettagliAmici"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data"
+            android:id="@+id/viewDataAmici"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewNomeAmici"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ora"
+            android:id="@+id/viewOraAmici"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewDataAmici"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descrizione"
+            android:id="@+id/viewDescrizioneAmici"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewOraAmici"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Luogo"
+            android:id="@+id/viewLuogoAmici"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewDescrizioneAmici"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tempo stimato"
+            android:id="@+id/viewTimeLeftAmici"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewLuogoAmici"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Note Aggiuntive"
+            android:id="@+id/viewNoteAmici"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewTimeLeftAmici"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="EVENTI AMICI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/textColor"
+            android:id="@+id/textViewAmiciCopy"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonBackAmici"
+            android:src="@drawable/ic_back"
+            android:background="@color/buttonAddRem"
+            android:layout_marginBottom="43dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modifica"
+            android:textColor="@color/textColor"
+            android:id="@+id/textViewEditAmici"
+            android:layout_above="@+id/imageButtonEditAmici"
+            android:layout_alignEnd="@+id/imageButtonEditAmici" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonEditAmici"
+            android:src="@drawable/ic_edit"
+            android:layout_marginBottom="34dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/buttonAddRem"
+            android:layout_alignEnd="@+id/textViewDettagliAmici"
+            android:layout_marginEnd="66dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Elimina"
+            android:textColor="@color/textColor"
+            android:id="@+id/textViewRemoveAmici"
+            android:layout_above="@+id/imageButtonRemoveAmici"
+            android:layout_alignEnd="@+id/imageButtonRemoveAmici"
+            android:layout_alignStart="@+id/imageButtonRemoveAmici" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonRemoveAmici"
+            android:src="@drawable/ic_remove"
+            android:layout_marginBottom="34dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/buttonAddRem"
+            android:layout_alignEnd="@+id/textViewDettagliAmici"
+            android:layout_below="@+id/textViewEditAmici"
+            android:layout_toEndOf="@+id/textViewEditAmici" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/contentTempoLiberoLayout"
+        android:background="@color/buttonAddRem"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true">
+
+        <TextView android:text="TEMPO LIBERO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/textColor"
+            android:id="@+id/textTempoLibero"
+            android:layout_marginTop="11dp"
+            android:layout_below="@+id/imageView_TempoLibero"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView_TempoLibero"
+            android:layout_marginEnd="33dp"
+            android:src="@drawable/ic_time"
+            android:paddingTop="4sp"
+            android:paddingBottom="4sp"
+            android:paddingLeft="6sp"
+            android:paddingRight="6sp"
+            android:layout_toEndOf="@+id/textTempoLibero"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eventi disponibili: "
+            android:layout_marginTop="5dp"
+            android:id="@+id/textViewEventiTempoLibero"
+            android:textColor="@color/textColor"
+            android:layout_below="@+id/textTempoLibero"
+            android:layout_alignParentStart="true" />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView_tempoLibero"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/textViewAggiungiTempoLibero"
+            android:layout_alignParentStart="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonAddTempoLibero"
+            android:src="@drawable/ic_plus"
+            android:adjustViewBounds="true"
+            android:paddingTop="4sp"
+            android:paddingBottom="4sp"
+            android:paddingLeft="6sp"
+            android:paddingRight="6sp"
+            android:layout_marginTop="8dp"
+            android:background="@color/buttonAddRem"
+            android:layout_alignEnd="@+id/textViewEventiTempoLibero"
+            android:layout_toEndOf="@+id/textViewAggiungiTempoLibero"
+            android:layout_below="@+id/textViewEventiTempoLibero" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aggiungi"
+            android:textColor="@color/textColor"
+            android:id="@+id/textViewAggiungiTempoLibero"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/textViewEventiTempoLibero"
+            android:layout_alignParentStart="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonRefreshTempoLibero"
+            android:src="@drawable/ic_refresh"
+            android:background="@color/buttonAddRem"
+            android:layout_alignTop="@+id/imageButtonAddTempoLibero"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Refresh"
+            android:id="@+id/textViewRefreshTempoLibero"
+            android:textColor="@color/textColor"
+            android:layout_below="@+id/textViewEventiTempoLibero"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:id="@+id/content_tempoLibero_details"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/textColor"
+            android:layout_marginTop="55dp"
+            android:id="@+id/textViewDettagliTempoLibero"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome:"
+            android:layout_marginTop="25dp"
+            android:id="@+id/viewNomeTempoLibero"
+            android:layout_below="@+id/textViewDettagliTempoLibero"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data"
+            android:id="@+id/viewDataTempoLibero"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewNomeTempoLibero"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ora"
+            android:id="@+id/viewOraTempoLibero"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewDataTempoLibero"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descrizione"
+            android:id="@+id/viewDescrizioneTempoLibero"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewOraTempoLibero"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Luogo"
+            android:id="@+id/viewLuogoTempoLibero"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewDescrizioneTempoLibero"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tempo stimato"
+            android:id="@+id/viewTimeLeftTempoLibero"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewLuogoTempoLibero"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Note Aggiuntive"
+            android:id="@+id/viewNoteTempoLibero"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewTimeLeftTempoLibero"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="EVENTI TEMPO LIBERO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/textColor"
+            android:id="@+id/textViewTempoLiberoCopy"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonBackTempoLibero"
+            android:src="@drawable/ic_back"
+            android:background="@color/buttonAddRem"
+            android:layout_marginBottom="43dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modifica"
+            android:textColor="@color/textColor"
+            android:id="@+id/textViewEditTempoLibero"
+            android:layout_above="@+id/imageButtonEditTempoLibero"
+            android:layout_alignEnd="@+id/imageButtonEditTempoLibero" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonEditTempoLibero"
+            android:src="@drawable/ic_edit"
+            android:layout_marginBottom="34dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/buttonAddRem"
+            android:layout_alignEnd="@+id/textViewDettagliTempoLibero"
+            android:layout_marginEnd="66dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Elimina"
+            android:textColor="@color/textColor"
+            android:id="@+id/textViewRemoveTempoLibero"
+            android:layout_above="@+id/imageButtonRemoveTempoLibero"
+            android:layout_alignEnd="@+id/imageButtonRemoveTempoLibero"
+            android:layout_alignStart="@+id/imageButtonRemoveTempoLibero" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonRemoveTempoLibero"
+            android:src="@drawable/ic_remove"
+            android:layout_marginBottom="34dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/buttonAddRem"
+            android:layout_alignEnd="@+id/textViewDettagliTempoLibero"
+            android:layout_below="@+id/textViewEditTempoLibero"
+            android:layout_toEndOf="@+id/textViewEditTempoLibero" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/contentSportLayout"
+        android:background="@color/buttonAddRem"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true">
+
+        <TextView android:text="SPORT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/textColor"
+            android:id="@+id/textSport"
+            android:layout_marginTop="11dp"
+            android:layout_below="@+id/imageView_Sport"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView_Sport"
+            android:layout_marginEnd="33dp"
+            android:src="@drawable/ic_football"
+            android:paddingTop="4sp"
+            android:paddingBottom="4sp"
+            android:paddingLeft="6sp"
+            android:paddingRight="6sp"
+            android:layout_toEndOf="@+id/textSport"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eventi disponibili: "
+            android:layout_marginTop="5dp"
+            android:id="@+id/textViewEventiSport"
+            android:textColor="@color/textColor"
+            android:layout_below="@+id/textSport"
+            android:layout_alignParentStart="true" />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView_sport"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/textViewAggiungiSport"
+            android:layout_alignParentStart="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonAddSport"
+            android:src="@drawable/ic_plus"
+            android:adjustViewBounds="true"
+            android:paddingTop="4sp"
+            android:paddingBottom="4sp"
+            android:paddingLeft="6sp"
+            android:paddingRight="6sp"
+            android:layout_marginTop="8dp"
+            android:background="@color/buttonAddRem"
+            android:layout_alignEnd="@+id/textViewEventiSport"
+            android:layout_toEndOf="@+id/textViewAggiungiSport"
+            android:layout_below="@+id/textViewEventiSport" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aggiungi"
+            android:textColor="@color/textColor"
+            android:id="@+id/textViewAggiungiSport"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/textViewEventiSport"
+            android:layout_alignParentStart="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonRefreshSport"
+            android:src="@drawable/ic_refresh"
+            android:background="@color/buttonAddRem"
+            android:layout_alignTop="@+id/imageButtonAddSport"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Refresh"
+            android:id="@+id/textViewRefreshSport"
+            android:textColor="@color/textColor"
+            android:layout_below="@+id/textViewEventiSport"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:id="@+id/content_sport_details"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/textColor"
+            android:layout_marginTop="55dp"
+            android:id="@+id/textViewDettagliSport"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome:"
+            android:layout_marginTop="25dp"
+            android:id="@+id/viewNomeSport"
+            android:layout_below="@+id/textViewDettagliSport"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data"
+            android:id="@+id/viewDataSport"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewNomeSport"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ora"
+            android:id="@+id/viewOraSport"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewDataSport"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descrizione"
+            android:id="@+id/viewDescrizioneSport"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewOraSport"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Luogo"
+            android:id="@+id/viewLuogoSport"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewDescrizioneSport"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tempo stimato"
+            android:id="@+id/viewTimeLeftSport"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewLuogoSport"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Note Aggiuntive"
+            android:id="@+id/viewNoteSport"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewTimeLeftSport"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="EVENTI SPORT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/textColor"
+            android:id="@+id/textViewSportCopy"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonBackSport"
+            android:src="@drawable/ic_back"
+            android:background="@color/buttonAddRem"
+            android:layout_marginBottom="43dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modifica"
+            android:textColor="@color/textColor"
+            android:id="@+id/textViewEditSport"
+            android:layout_above="@+id/imageButtonEditSport"
+            android:layout_alignEnd="@+id/imageButtonEditSport" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonEditSport"
+            android:src="@drawable/ic_edit"
+            android:layout_marginBottom="34dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/buttonAddRem"
+            android:layout_alignEnd="@+id/textViewDettagliSport"
+            android:layout_marginEnd="66dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Elimina"
+            android:textColor="@color/textColor"
+            android:id="@+id/textViewRemoveSport"
+            android:layout_above="@+id/imageButtonRemoveSport"
+            android:layout_alignEnd="@+id/imageButtonRemoveSport"
+            android:layout_alignStart="@+id/imageButtonRemoveSport" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonRemoveSport"
+            android:src="@drawable/ic_remove"
+            android:layout_marginBottom="34dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/buttonAddRem"
+            android:layout_alignEnd="@+id/textViewDettagliSport"
+            android:layout_below="@+id/textViewEditSport"
+            android:layout_toEndOf="@+id/textViewEditSport" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/contentFamilyLayout"
+        android:background="@color/buttonAddRem"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true">
+
+        <TextView android:text="FAMILY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/textColor"
+            android:id="@+id/textFamily"
+            android:layout_marginTop="11dp"
+            android:layout_below="@+id/imageView_Family"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView_Family"
+            android:layout_marginEnd="33dp"
+            android:src="@drawable/ic_family"
+            android:paddingTop="4sp"
+            android:paddingBottom="4sp"
+            android:paddingLeft="6sp"
+            android:paddingRight="6sp"
+            android:layout_toEndOf="@+id/textFamily"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eventi disponibili: "
+            android:layout_marginTop="5dp"
+            android:id="@+id/textViewEventiFamily"
+            android:textColor="@color/textColor"
+            android:layout_below="@+id/textFamily"
+            android:layout_alignParentStart="true" />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView_family"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/textViewAggiungiFamily"
+            android:layout_alignParentStart="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonAddFamily"
+            android:src="@drawable/ic_plus"
+            android:adjustViewBounds="true"
+            android:paddingTop="4sp"
+            android:paddingBottom="4sp"
+            android:paddingLeft="6sp"
+            android:paddingRight="6sp"
+            android:layout_marginTop="8dp"
+            android:background="@color/buttonAddRem"
+            android:layout_alignEnd="@+id/textViewEventiFamily"
+            android:layout_toEndOf="@+id/textViewAggiungiFamily"
+            android:layout_below="@+id/textViewEventiFamily" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aggiungi"
+            android:textColor="@color/textColor"
+            android:id="@+id/textViewAggiungiFamily"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/textViewEventiFamily"
+            android:layout_alignParentStart="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonRefreshFamily"
+            android:src="@drawable/ic_refresh"
+            android:background="@color/buttonAddRem"
+            android:layout_alignTop="@+id/imageButtonAddFamily"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Refresh"
+            android:id="@+id/textViewRefreshFamily"
+            android:textColor="@color/textColor"
+            android:layout_below="@+id/textViewEventiFamily"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:id="@+id/content_family_details"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/textColor"
+            android:layout_marginTop="55dp"
+            android:id="@+id/textViewDettagliFamily"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome:"
+            android:layout_marginTop="25dp"
+            android:id="@+id/viewNomeFamily"
+            android:layout_below="@+id/textViewDettagliFamily"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data"
+            android:id="@+id/viewDataFamily"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewNomeFamily"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ora"
+            android:id="@+id/viewOraFamily"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewDataFamily"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descrizione"
+            android:id="@+id/viewDescrizioneFamily"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewOraFamily"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Luogo"
+            android:id="@+id/viewLuogoFamily"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewDescrizioneFamily"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tempo stimato"
+            android:id="@+id/viewTimeLeftFamily"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewLuogoFamily"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Note Aggiuntive"
+            android:id="@+id/viewNoteFamily"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewTimeLeftFamily"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="EVENTI FAMIGLIA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/textColor"
+            android:id="@+id/textViewFamilyCopy"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonBackFamily"
+            android:src="@drawable/ic_back"
+            android:background="@color/buttonAddRem"
+            android:layout_marginBottom="43dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modifica"
+            android:textColor="@color/textColor"
+            android:id="@+id/textViewEditFamily"
+            android:layout_above="@+id/imageButtonEditFamily"
+            android:layout_alignEnd="@+id/imageButtonEditFamily" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonEditFamily"
+            android:src="@drawable/ic_edit"
+            android:layout_marginBottom="34dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/buttonAddRem"
+            android:layout_alignEnd="@+id/textViewDettagliFamily"
+            android:layout_marginEnd="66dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Elimina"
+            android:textColor="@color/textColor"
+            android:id="@+id/textViewRemoveFamily"
+            android:layout_above="@+id/imageButtonRemoveFamily"
+            android:layout_alignEnd="@+id/imageButtonRemoveFamily"
+            android:layout_alignStart="@+id/imageButtonRemoveFamily" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonRemoveFamily"
+            android:src="@drawable/ic_remove"
+            android:layout_marginBottom="34dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/buttonAddRem"
+            android:layout_alignEnd="@+id/textViewDettagliFamily"
+            android:layout_below="@+id/textViewEditFamily"
+            android:layout_toEndOf="@+id/textViewEditFamily" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/contentLavoroLayout"
+        android:background="@color/buttonAddRem"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true">
+
+        <TextView android:text="LAVORO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/textColor"
+            android:id="@+id/textLavoro"
+            android:layout_marginTop="11dp"
+            android:layout_below="@+id/imageView_Lavoro"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView_Lavoro"
+            android:layout_marginEnd="33dp"
+            android:src="@drawable/ic_business"
+            android:paddingTop="4sp"
+            android:paddingBottom="4sp"
+            android:paddingLeft="6sp"
+            android:paddingRight="6sp"
+            android:layout_toEndOf="@+id/textLavoro"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eventi disponibili: "
+            android:layout_marginTop="5dp"
+            android:id="@+id/textViewEventiLavoro"
+            android:textColor="@color/textColor"
+            android:layout_below="@+id/textLavoro"
+            android:layout_alignParentStart="true" />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView_lavoro"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/textViewAggiungiLavoro"
+            android:layout_alignParentStart="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonAddLavoro"
+            android:src="@drawable/ic_plus"
+            android:adjustViewBounds="true"
+            android:paddingTop="4sp"
+            android:paddingBottom="4sp"
+            android:paddingLeft="6sp"
+            android:paddingRight="6sp"
+            android:layout_marginTop="8dp"
+            android:background="@color/buttonAddRem"
+            android:layout_alignEnd="@+id/textViewEventiLavoro"
+            android:layout_toEndOf="@+id/textViewAggiungiLavoro"
+            android:layout_below="@+id/textViewEventiLavoro" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aggiungi"
+            android:textColor="@color/textColor"
+            android:id="@+id/textViewAggiungiLavoro"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/textViewEventiLavoro"
+            android:layout_alignParentStart="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonRefreshLavoro"
+            android:src="@drawable/ic_refresh"
+            android:background="@color/buttonAddRem"
+            android:layout_alignTop="@+id/imageButtonAddLavoro"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Refresh"
+            android:id="@+id/textViewRefreshLavoro"
+            android:textColor="@color/textColor"
+            android:layout_below="@+id/textViewEventiLavoro"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:id="@+id/content_lavoro_details"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/textColor"
+            android:layout_marginTop="55dp"
+            android:id="@+id/textViewDettagliLavoro"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome:"
+            android:layout_marginTop="25dp"
+            android:id="@+id/viewNomeLavoro"
+            android:layout_below="@+id/textViewDettagliLavoro"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data"
+            android:id="@+id/viewDataLavoro"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewNomeLavoro"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ora"
+            android:id="@+id/viewOraLavoro"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewDataLavoro"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descrizione"
+            android:id="@+id/viewDescrizioneLavoro"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewOraLavoro"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Luogo"
+            android:id="@+id/viewLuogoLavoro"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewDescrizioneLavoro"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tempo stimato"
+            android:id="@+id/viewTimeLeftLavoro"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewLuogoLavoro"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Note Aggiuntive"
+            android:id="@+id/viewNoteLavoro"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewTimeLeftLavoro"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="EVENTI LAVORO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/textColor"
+            android:id="@+id/textViewLavoroCopy"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonBackLavoro"
+            android:src="@drawable/ic_back"
+            android:background="@color/buttonAddRem"
+            android:layout_marginBottom="43dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modifica"
+            android:textColor="@color/textColor"
+            android:id="@+id/textViewEditLavoro"
+            android:layout_above="@+id/imageButtonEditLavoro"
+            android:layout_alignEnd="@+id/imageButtonEditLavoro" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonEditLavoro"
+            android:src="@drawable/ic_edit"
+            android:layout_marginBottom="34dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/buttonAddRem"
+            android:layout_alignEnd="@+id/textViewDettagliLavoro"
+            android:layout_marginEnd="66dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Elimina"
+            android:textColor="@color/textColor"
+            android:id="@+id/textViewLavoro"
+            android:layout_above="@+id/imageButtonRemoveLavoro"
+            android:layout_alignEnd="@+id/imageButtonRemoveLavoro"
+            android:layout_alignStart="@+id/imageButtonRemoveLavoro" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonRemoveLavoro"
+            android:src="@drawable/ic_remove"
+            android:layout_marginBottom="34dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/buttonAddRem"
+            android:layout_alignEnd="@+id/textViewDettagliLavoro"
+            android:layout_below="@+id/textViewEditLavoro"
+            android:layout_toEndOf="@+id/textViewEditLavoro" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/content_modifica"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewModifica"
+            android:text="Modifica l'evento"
+            android:textSize="30dp"
+            android:textColor="@color/textColor"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modifica nome:"
+            android:layout_marginTop="30dp"
+            android:id="@+id/modifica_nome"
+            android:layout_below="@+id/textViewModifica"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/buttonAnnullaModifica" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modifica data"
+            android:layout_marginTop="30dp"
+            android:id="@+id/modifica_data"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/modifica_nome"
+            android:layout_alignEnd="@+id/buttonAnnullaModifica" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modifica ora:"
+            android:id="@+id/modifica_ora"
+            android:layout_marginTop="36dp"
+            android:layout_below="@+id/edit_data"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modifica luogo:"
+            android:id="@+id/modifica_luogo"
+            android:layout_below="@+id/edit_ora"
+            android:layout_marginTop="36dp"
+            android:layout_alignEnd="@+id/buttonAnnullaModifica"
+            android:layout_alignParentStart="true" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modifica descrizione:"
+            android:id="@+id/modifica_descrizione"
+            android:layout_alignBottom="@+id/edit_descrizione"
+            android:layout_alignParentStart="true" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modifica note aggiuntive:"
+            android:id="@+id/modifica_note"
+            android:layout_alignTop="@+id/edit_note"
+            android:layout_alignEnd="@+id/buttonAnnullaModifica" />
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonSalvaModifica"
+            android:src="@drawable/ic_save"
+            android:background="@color/textColor"
+            android:layout_marginEnd="41dp"
+            android:layout_alignTop="@+id/buttonAnnullaModifica"
+            android:layout_alignEnd="@+id/textViewModifica" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  Salva"
+            android:id="@+id/textViewSalvaModifica"
+            android:layout_alignTop="@+id/textViewAnnullaModifica"
+            android:layout_alignStart="@+id/buttonSalvaModifica" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonAnnullaModifica"
+            android:src="@drawable/ic_annulla"
+            android:background="@color/textColor"
+            android:layout_marginBottom="24dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/modifica_ora" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Annulla"
+            android:id="@+id/textViewAnnullaModifica"
+            android:layout_above="@+id/buttonAnnullaModifica"
+            android:layout_alignEnd="@+id/buttonAnnullaModifica" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_nome"
+            android:layout_above="@+id/modifica_data"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/buttonAnnullaModifica" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_data"
+            android:layout_alignBottom="@+id/modifica_data"
+            android:layout_alignEnd="@+id/edit_nome"
+            android:layout_toEndOf="@+id/modifica_nome" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_ora"
+            android:layout_alignBottom="@+id/modifica_ora"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/modifica_data" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_luogo"
+            android:layout_alignBottom="@+id/modifica_luogo"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/modifica_luogo" />
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_note"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/edit_descrizione"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/modifica_note" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_descrizione"
+            android:layout_below="@+id/modifica_luogo"
+            android:layout_marginTop="23dp"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/modifica_descrizione" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

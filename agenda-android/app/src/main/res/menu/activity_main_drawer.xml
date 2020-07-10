@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/group">
+        <item android:id="@+id/nav_home" android:icon="@drawable/ic_home"
+            android:title="Casa" />
+        <item android:id="@+id/nav_amici" android:icon="@drawable/ic_friends"
+            android:title="Amici" />
+        <item android:id="@+id/nav_tempolibero" android:icon="@drawable/ic_time"
+            android:title="Tempo Libero" />
+        <item android:id="@+id/nav_sport" android:icon="@drawable/ic_sport"
+            android:title="Sport" />
+        <item android:id="@+id/nav_family" android:icon="@drawable/ic_family"
+            android:title="Family" />
+        <item android:id="@+id/nav_work" android:icon="@drawable/ic_work"
+            android:title="Lavoro" />
+    </group>
+
+    <item android:title="Modifica Categorie">
+        <menu>
+            <item android:id="@+id/nav_add" android:icon="@drawable/ic_add"
+                android:title="Aggiungi" />
+            <item android:id="@+id/nav_remove" android:icon="@drawable/ic_delete"
+                android:title="Rimuovi" />
+        </menu>
+    </item>
+
+</menu>

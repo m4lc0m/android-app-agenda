@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/contentView"
+        android:background="@color/buttonAddRem"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true">
+
+        <TextView android:text="Category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/textColor"
+            android:id="@+id/textCasa"
+            android:layout_marginTop="11dp"
+            android:layout_below="@+id/imageView_home"
+            android:layout_alignParentLeft="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView_home"
+            android:layout_marginEnd="33dp"
+            android:src="@drawable/ic_home_orange"
+            android:paddingTop="4sp"
+            android:paddingBottom="4sp"
+            android:paddingLeft="6sp"
+            android:paddingRight="6sp"
+            android:layout_toRightOf="@+id/textCasa"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eventi disponibili: "
+            android:id="@+id/textViewEventi"
+            android:textColor="@color/textColor"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textCasa" />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView_home"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/textViewAggiungi"
+            android:layout_alignParentLeft="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonAdd"
+            android:src="@drawable/ic_plus"
+            android:adjustViewBounds="true"
+            android:paddingTop="4sp"
+            android:paddingBottom="4sp"
+            android:paddingLeft="6sp"
+            android:paddingRight="6sp"
+            android:layout_marginTop="8dp"
+            android:background="@color/buttonAddRem"
+            android:layout_alignRight="@+id/textViewEventi"
+            android:layout_toRightOf="@+id/textViewAggiungi"
+            android:layout_below="@+id/textViewEventi" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aggiungi"
+            android:textColor="@color/textColor"
+            android:id="@+id/textViewAggiungi"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/textViewEventi"
+            android:layout_alignParentLeft="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonRefresh"
+            android:src="@drawable/ic_refresh"
+            android:background="@color/buttonAddRem"
+            android:layout_alignTop="@+id/imageButtonAdd"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Refresh"
+            android:id="@+id/textViewRefresh"
+            android:textColor="@color/textColor"
+            android:layout_below="@+id/textViewEventi"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/content_home_details"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/textColor"
+            android:layout_marginTop="55dp"
+            android:id="@+id/textViewDettagli"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome:"
+            android:layout_marginTop="25dp"
+            android:id="@+id/viewNome"
+            android:layout_below="@+id/textViewDettagli"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data"
+            android:id="@+id/viewData"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewNome"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ora"
+            android:id="@+id/viewOra"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewData"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descrizione"
+            android:id="@+id/viewDescrizione"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewOra"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Luogo"
+            android:id="@+id/viewLuogo"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewDescrizione"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tempo stimato"
+            android:id="@+id/viewTimeLeft"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewLuogo"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Note Aggiuntive"
+            android:id="@+id/viewNote"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/viewTimeLeft"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:text="EVENTI CASA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/textColor"
+            android:id="@+id/textViewCasaCopy"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonBack"
+            android:src="@drawable/ic_back"
+            android:background="@color/buttonAddRem"
+            android:layout_marginBottom="43dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modifica"
+            android:textColor="@color/textColor"
+            android:id="@+id/textViewEdit"
+            android:layout_above="@+id/imageButtonEdit"
+            android:layout_alignRight="@+id/imageButtonEdit" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonEdit"
+            android:src="@drawable/ic_edit"
+            android:layout_marginBottom="34dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/buttonAddRem"
+            android:layout_alignRight="@+id/textViewDettagli"
+            android:layout_marginEnd="66dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Elimina"
+            android:textColor="@color/textColor"
+            android:id="@+id/textViewRemove"
+            android:layout_above="@+id/imageButtonRemove"
+            android:layout_alignRight="@+id/imageButtonRemove"
+            android:layout_alignLeft="@+id/imageButtonRemove" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonRemove"
+            android:src="@drawable/ic_remove"
+            android:layout_marginBottom="34dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/buttonAddRem"
+            android:layout_alignRight="@+id/textViewDettagli"
+            android:layout_below="@+id/textViewEdit"
+            android:layout_toRightOf="@+id/textViewEdit" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
+

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.musto.agendatest.CreaCategoria">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layoutCreaCategoria"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crea una nuova categoria"
+            android:textSize="20dp"
+            android:textColor="@color/textColor"
+            android:layout_marginLeft="40dp"
+            android:id="@+id/textViewCreaCategoria"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inserisci un nome:"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/textColor"
+            android:textSize="15dp"
+            android:id="@+id/textViewInserisci"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textViewCreaCategoria" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editNomeCategoria"
+            android:layout_below="@+id/textViewCreaCategoria"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/textViewInserisci" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seleziona un icona"
+            android:textSize="15dp"
+            android:textColor="@color/textColor"
+            android:layout_marginTop="20dp"
+            android:id="@+id/textViewSelezioneIcona"
+            android:layout_below="@+id/editNomeCategoria"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonSalva"
+            android:src="@drawable/ic_save"
+            android:background="@color/buttonAddRem"
+            android:layout_marginLeft="59dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/imageButtonAnnulla"
+            android:layout_marginBottom="39dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonAnnulla"
+            android:src="@drawable/ic_annulla"
+            android:background="@color/buttonAddRem"
+            android:layout_alignTop="@+id/imageButtonSalva"
+            android:layout_toLeftOf="@+id/editNomeCategoria" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Annulla"
+            android:textColor="@color/textColor"
+            android:id="@+id/textViewAnnulla"
+            android:layout_above="@+id/imageButtonAnnulla"
+            android:layout_alignRight="@+id/imageButtonAnnulla" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  Salva"
+            android:id="@+id/textViewSalva"
+            android:textColor="@color/textColor"
+            android:layout_above="@+id/imageButtonSalva"
+            android:layout_alignLeft="@+id/imageButtonSalva" />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listViewIcone"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/textViewSelezioneIcona"
+            android:layout_toLeftOf="@+id/textViewSalva"
+            android:layout_above="@+id/textViewAnnulla"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+</RelativeLayout>
+
