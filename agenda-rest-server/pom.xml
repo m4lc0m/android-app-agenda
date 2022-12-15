@@ -8,7 +8,7 @@
   <name>AgendaRestServer</name>
   <url>http://maven.apache.org</url>
  <properties>
-  	<version.springframework>5.1.5.RELEASE</version.springframework>
+  	<version.springframework>5.2.20.RELEASE</version.springframework>
   	<version.junit>4.11</version.junit>
   	<version.commons.beanutils>1.9.2</version.commons.beanutils>
     <version.jackson>2.7.3</version.jackson>
